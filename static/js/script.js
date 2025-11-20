@@ -32,6 +32,28 @@ if (sendBtn) {
     sendBtn.addEventListener('click', sendMessage);
 }
 
+// Mobile Navigation Logic
+const backBtn = document.getElementById('backBtn');
+const sidebar = document.querySelector('.sidebar');
+const chatArea = document.querySelector('.chat-area');
+
+if (backBtn) {
+    backBtn.addEventListener('click', () => {
+        sidebar.classList.remove('hidden');
+        chatArea.classList.remove('active');
+    });
+}
+
+const chatItems = document.querySelectorAll('.chat-item');
+chatItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+            sidebar.classList.add('hidden');
+            chatArea.classList.add('active');
+        }
+    });
+});
+
 messageInput.addEventListener('input', function () {
     sendTypingStatus(true);
     clearTimeout(typingTimeout);

@@ -257,26 +257,45 @@ body {
 }
 
 @media (max-width: 900px) {
+    .app-container {
+        position: relative;
+    }
+
     .sidebar {
-        width: 80px;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        z-index: 10;
+        transition: transform 0.3s ease;
+    }
+
+    .chat-area {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        z-index: 5;
+        display: flex;
+    }
+
+    .sidebar.hidden {
+        transform: translateX(-100%);
+    }
+
+    .chat-area.active {
+        z-index: 20;
     }
 
     .chat-info,
     .search-bar,
     .header .icons {
+        display: flex;
+    }
+
+    .header .icons {
         display: none;
     }
 
-    .header {
-        justify-content: center;
-    }
-
-    .chat-item {
-        justify-content: center;
-        padding: 12px 0;
-    }
-
-    .chat-item .avatar {
-        margin: 0;
+    #backBtn {
+        display: block !important;
     }
 }
