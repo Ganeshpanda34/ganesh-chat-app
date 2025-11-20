@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="header">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="search-bar">
+                <div class="search-input-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search or start new chat">
+                </div>
+            </div>
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <div class="avatar">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-name">Global Chat</div>
+                        <div class="last-message">Click to start chatting</div>
+                    </div>
+                    <div class="chat-time">Now</div>
+                </div>
+                <!-- More chat items can be added here -->
+            </div>
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <div class="avatar">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <div class="chat-info">
+                    <div class="chat-name">Global Chat</div>
+                    <div class="chat-status">online</div>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="messages-container" id="messages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="input-area">
+                <i class="far fa-smile"></i>
+                <i class="fas fa-plus"></i>
+                <input type="text" id="messageInput" placeholder="Type a message">
+                <i class="fas fa-microphone"></i>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
